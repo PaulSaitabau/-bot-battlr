@@ -4,10 +4,9 @@ const BotCard = ({ bot, handleClick, handleDischarge }) => {
 
   
   return (
-    <div className="ui column">
+    <div className="ui column" key={bot.id}>
       <div
         className="ui card"
-        key={bot.id}
         onClick={() => handleClick(bot.id)}
       >
         <div className="image">
@@ -35,18 +34,15 @@ const BotCard = ({ bot, handleClick, handleDischarge }) => {
             {bot.armor}
           </span>
           <span>
-            <div className="ui center aligned segment basic">
-              <button
-                className="ui mini red button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleDischarge(bot.id)
-                }
-              }
-              >
-                X
-              </button>
-            </div>
+            <button
+              className="ui mini red button"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDischarge(bot.id);
+              }}
+            >
+              clear
+            </button>
           </span>
         </div>
       </div>
