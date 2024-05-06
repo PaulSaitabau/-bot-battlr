@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgb(42, 66, 73);
 }
 
 .text-wrap {
@@ -21,5 +22,5 @@ body {
 }
 
 .ui.grid {
-  padding: 0px 200px;
+  padding: 0px 20px;
 }
